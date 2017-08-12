@@ -1,5 +1,6 @@
+<!-- The index page will list every student and embed a link to each students individual path -->
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <div><%= link_to student.to_s, student_path(student) %></div>
   <% end %>
 </div>
